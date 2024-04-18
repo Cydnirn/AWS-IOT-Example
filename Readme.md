@@ -1,0 +1,1 @@
+Source code modified from this [how2electronics](https://how2electronics.com/connecting-esp32-to-amazon-aws-iot-core-using-mqtt/)
