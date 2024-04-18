@@ -4,9 +4,8 @@
 #include <ArduinoJson.h>
 #include "WiFi.h"
  
-#define AWS_IOT_PUBLISH_TOPIC   "esp32/pub"
-#define AWS_IOT_SUBSCRIBE_TOPIC "esp32/sub"
- 
+#define AWS_IOT_PUBLISH_TOPIC   "esp32/team/temp"
+
  
 WiFiClientSecure net = WiFiClientSecure();
 PubSubClient client(net);
@@ -48,9 +47,6 @@ void connectAWS()
     Serial.println("AWS IoT Timeout!");
     return;
   }
- 
-  // Subscribe to a topic
-  client.subscribe(AWS_IOT_SUBSCRIBE_TOPIC);
  
   Serial.println("AWS IoT Connected!");
 }
